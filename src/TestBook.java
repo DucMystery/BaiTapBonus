@@ -1,6 +1,16 @@
 import java.util.Scanner;
 
 public class TestBook {
+    public static void display(Book book){
+        if (book instanceof ProgrammingBook){
+            book = (ProgrammingBook) book;
+            System.out.println(book.toString());
+        }
+        if (book instanceof FictionBook) {
+            book = (FictionBook) book;
+            System.out.println(book.toString());
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -34,14 +44,7 @@ public class TestBook {
                      boolean flag1 =false;
                      for (int i=0;i<books.length;i++){
                          if (books[i].getBookCode().contains(code)){
-                             if (books[i] instanceof ProgrammingBook){
-                                 books[i] = (ProgrammingBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
-                             if (books[i] instanceof FictionBook){
-                                 books[i] =(FictionBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
+                             display(books[i]);
                              flag1 =true;
                          }
                      }
@@ -56,14 +59,7 @@ public class TestBook {
 
                      for (int i =0;i<books.length;i++) {
                          if (books[i].getName().contains(nameBook)) {
-                             if (books[i] instanceof ProgrammingBook){
-                                 books[i] = (ProgrammingBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
-                             if (books[i] instanceof FictionBook){
-                                 books[i] =(FictionBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
+                             display(books[i]);
                              flag =true;
                          }
                      }
@@ -78,14 +74,7 @@ public class TestBook {
 
                      for (int i=0;i<books.length;i++){
                          if (books[i].getAuthor().contains(author)){
-                             if (books[i] instanceof ProgrammingBook){
-                                 books[i] = (ProgrammingBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
-                             if (books[i] instanceof FictionBook){
-                                 books[i] =(FictionBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
+                             display(books[i]);
                              flag2 =true;
                          }
                      }
@@ -100,14 +89,7 @@ public class TestBook {
 
                      for (int i=0;i< books.length;i++){
                          if (books[i].getPrice()==price){
-                             if (books[i] instanceof ProgrammingBook){
-                                 books[i] = (ProgrammingBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
-                             if (books[i] instanceof FictionBook){
-                                 books[i] =(FictionBook) books[i];
-                                 System.out.println(books[i].toString());
-                             }
+                             display(books[i]);
                              flag3 =true;
                          }
                      }

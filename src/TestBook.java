@@ -54,7 +54,8 @@ public class TestBook {
                          break;
                  case 2:
                      System.out.println(" Mời nhập vào tên cuốn sách:");
-                     String nameBook =scanner.next();
+                     scanner.nextLine();
+                     String nameBook =scanner.nextLine();
                      boolean flag =false;
 
                      for (int i =0;i<books.length;i++) {
@@ -69,7 +70,8 @@ public class TestBook {
                      break;
                  case 3:
                      System.out.println("Mời nhập vào tên tác giả:");
-                     String author = scanner.next();
+                     scanner.nextLine();
+                     String author = scanner.nextLine();
                      boolean flag2 =false;
 
                      for (int i=0;i<books.length;i++){
